@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import NetInfo from "@react-native-community/netinfo";
 import LottieView from "lottie-react-native";
-import Modal from "react-native-modal"; // Import the Modal
-/* eslint-disable */
+import Modal from "react-native-modal";
 
 const NetworkStatus = () => {
   const [isConnected, setIsConnected] = useState(true);
@@ -17,10 +16,16 @@ const NetworkStatus = () => {
   }, []);
 
   return (
-    <Modal isVisible={!isConnected} animationIn="fadeIn" animationOut="fadeOut">
+    <Modal
+      isVisible={!isConnected}
+      animationIn="fadeIn"
+      animationOut="fadeOut"
+      backdropColor="transparent"
+      style={styles.modal}
+    >
       <View style={styles.modalContent}>
         <LottieView
-          source={require("../../assets/no-net.json")} // Replace with your Lottie file
+          source={require("../../assets/no-net.json")}
           autoPlay
           loop
           style={styles.lottie}
@@ -32,14 +37,14 @@ const NetworkStatus = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  modal: {
+    margin: 0, // Ensures it covers the whole screen without margins
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#fff",
+    backgroundColor: "transparent", // Ensures full transparency
   },
   modalContent: {
-    backgroundColor: "white",
+    backgroundColor: "rgba(0, 0, 0, 0.7)", // Semi-transparent background
     padding: 20,
     borderRadius: 10,
     alignItems: "center",
@@ -52,7 +57,7 @@ const styles = StyleSheet.create({
   alertText: {
     fontSize: 16,
     fontWeight: "bold",
-    color: "red",
+    color: "white",
     marginTop: 10,
   },
 });
