@@ -1,10 +1,9 @@
 {
   "expo": {
-    "name": "puppy",
+    "name": "pookie",
     "slug": "puppy",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -13,9 +12,10 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/icon3.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.adharv.m.puppy"
     },
     "web": {
       "bundler": "metro",
@@ -27,7 +27,7 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "./assets/icon3.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
@@ -36,6 +36,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "ace9ae58-b7b3-43d8-bf92-91a566800fbf"
+      }
     }
   }
 }
