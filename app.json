@@ -12,7 +12,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/icon3.png",
+        "foregroundImage": "./assets/mainicon.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.adharv.m.puppy"
@@ -27,7 +27,7 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/icon3.png",
+          "image": "./assets/mainicon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
